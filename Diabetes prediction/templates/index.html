@@ -82,7 +82,6 @@
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
         
-        // تحويل القيم الرقمية للتأكد من إرسالها كأرقام وليس نصوص
         const numericFields = ['age', 'hypertension', 'heart_disease', 'bmi', 'HbA1c_level', 'blood_glucose_level'];
         numericFields.forEach(field => {
             if (data[field]) data[field] = parseFloat(data[field]);
@@ -119,4 +118,5 @@
 </script>
 
 </body>
+
 </html>
